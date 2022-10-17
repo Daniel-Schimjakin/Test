@@ -14,6 +14,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        max-width:100%; 
     }
     body{
         overflow-x: hidden;
@@ -28,6 +29,8 @@
     section{
         height: 100vh;
         width: 100vw;
+        max-height: 100%;
+        max-width: 100%;
     }
 
     .italic{
@@ -103,7 +106,7 @@
 
     }
     #aboutus-text{
-
+        width: 100vw;
     }
     #aboutus-text p{
         position: relative;
@@ -158,8 +161,8 @@
     #team-banner{
         position: relative;
         top: 100px;
-        background-color: red;
         background-image: url(Bilder/bg-image2_7.svg);
+        width: 100vw;
         height: 150px;
         display: flex;
         justify-content: center;
@@ -310,59 +313,228 @@
         height: 80px;
     }
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 415px) {
+        #MenuIcon i{
+            display: block;
+        }
+
+        #titel .t1 {
+            font-size: 90px;
+        }
+        #titel .t2 {
+            font-size: 30px;
+        }
+
+        .p1{
+            font-size: 32px;
+            font-weight: 600;
+        }
+        .p2{
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        #team{
+            position: relative;
+            top: 750px;
+        }
+
+        h1{
+            font-size: 60px;
+        }
+        
+        #box-container{
+            top: 150px;
+            display: grid;
+            grid-template-columns: auto;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        #team-box-container{
+            position: relative;
+            top: -80px;
+        }
+        .team-box-field{
+            padding: 25px 0;
+            position: absolute;
+            width: 260px;
+            height: 225px;
+            background-color: var(--main-color);
+        }
+
+        .team-box img {
+            z-index: 10;
+            height: 225px;
+            width: auto;
+            box-shadow: 5px 10px 50px black;
+        }
+
+        .team-header {
+            font-size: 26px;
+            margin: 0px 0;
+        }
+
+        .team-subtitle {
+            margin: 0 20px;
+            font-size: 18px;
+        }
+        .team-text {
+            font-size: 16px;
+            margin: 0 40px;
+            line-height: 25px;
+        }
+
+        .f1{
+            justify-self: start;
+            margin: 250px 150px;
+        }
+        .f2{
+            justify-self: start;
+            margin: 529px 0px;
+        }
+        .left{
+            margin: 0 0;
+            justify-self: start;
+        }
+        .right{
+            margin: 0 5px;
+            width: auto;
+            justify-self: end;
+        }
+
+        #balken1{
+            display: none;
+        }
+        #balken2{
+            display: none;
+        }
+
+        #contact{
+            position: relative;
+            top: 200px;
+            margin: 600px 0 200px;
+        }
+
+        h2{
+            margin: 0 40px;
+            font-size: 26px;
+        }
+        
+        #button-contact{
+            margin: 20px 40px;
+            border: 10px solid var(--main-color);
+            font-size: 20px;
+            font-weight: 600;
+            border-radius: 6px;
+        }
+        footer{
+            position: relative;
+            top: 100px;
+            background-color: var(--main-color);
+        }
+        #social-media{
+            width: 100vw;
+            margin: 30px -50px;
+            position: absolute;
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: end;
+        }
+        footer ul {
+            padding: 5px 20px;
+        }
+        #footer-ul {
+            display: grid;
+            grid-template-columns: 125px;
+            text-align: center;
+        }
+        #footer-ul li a {
+            font-size: 17px;
+        }
+
+        #social-media img{
+            height: 50px;
+        }
+    }
+
+
+    @media screen and (min-width: 416px) and (max-width: 767px) {
+  
         #MenuIcon i{
             display: block;
         }
 
         .p1{
-            font-size: 60px;
+            font-size: 40px;
             font-weight: 600;
         }
         .p2{
-            font-size: 15px;
+            font-size: 18px;
             font-weight: 600;
         }
         
         #box-container{
+            top: 150px;
             display: grid;
             grid-template-columns: auto auto;
-            justify-content: space-evenly;
+            justify-content: center;
+            gap: 5px;
         }
         .f1{
-            justify-self: end;
-            z-index: 0;
-            margin: 250px  5vw;
-            box-shadow: 5px 10px 50px black;
+            justify-self: start;
+            margin: 250px  250px;
         }
         .f2{
             justify-self: start;
-            margin: 704px 0vw;
-            box-shadow: 5px 10px 50px black;
+            margin: 704px 0px;
         }
         .left{
-            z-index: 1;
-            width: 330px;
-            margin: 0 150px;
+            margin: 0 0;
             justify-self: start;
         }
         .right{
+            margin: 0 0px;
+            width: 265px;
             justify-self: end;
-            background-color: red;
-            max-width: 0;
-            margin: 0 65vw;
-            width: 100vw;
         }
         #balken1{
-            height: 50px;
-            margin: 425px 0;
-            transform: scale(1, 3);
+            display: none;
         }
         #balken2{
-            height: 50px;
-            margin: 880px 0;
-            transform: scale(1, 3);
+            display: none;
         }
+
+        h2{
+            margin: 0 40px;
+            font-size: 40px;
+        }
+
+        #contact{
+            margin: 500px 0 200px;
+        }
+        
+        #button-contact{
+            margin: 20px 40px;
+            border: 10px solid var(--main-color);
+            font-size: 20px;
+            font-weight: 600;
+            border-radius: 6px;
+        }
+        footer{
+            background-color: var(--main-color);
+        }
+        #social-media{
+            width: 100vw;
+            margin: 30px -50px;
+            position: absolute;
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: end;
+        }
+        #social-media img{
+            height: 60px;
+        }   
     }
 
 </style>
