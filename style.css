@@ -10,7 +10,7 @@
         background-color: var(--main-bg-color);
     }
     :root {
-        --main-color: rgb(221, 172, 51);
+        --main-color: rgb(46, 49, 142);
         --main-bg-color: rgb(255, 255, 255);
         --main-font-family: 'Open Sans', sans-serif;
     }
@@ -142,6 +142,7 @@
     }
     .box p{
         font-family: var(--main-font-family);
+        color: white;
     }
     .box-header{
         text-align: center;
@@ -161,7 +162,6 @@
     #team-banner{
         position: relative;
         top: 100px;
-
         width: 100vw;
         height: 150px;
         display: flex;
@@ -228,6 +228,7 @@
         height: auto;
     }
     .balken{
+        width: 100vw;
         top: 80px;
         left: 0;
         position: absolute;
@@ -240,11 +241,13 @@
         text-align: start;
         margin: 0px 38px;
         line-height: 35px;
+        color: white;
     }
     .team-subtitle{
         margin: 0 38px;
         font-family: var(--main-font-family);
         font-size: 24px;
+        color: white;
     }
     .team-box-field li{
         list-style-position: outside;
@@ -254,6 +257,7 @@
         font-size: 25px;
         margin: 0 65px;
         line-height: 40px;
+        color: white;
     }
     
     /* ----------------- CONTACT ------------------*/
@@ -278,11 +282,12 @@
         font-weight: 600;
         border-radius: 6px;
         cursor: pointer;
+        color: white;
     }
     
     /* ----------------- FOOTER ------------------*/
     footer{
-        background-image: url(Bilder/footer.svg);
+        background-image: url(Bilder/footer-blue.svg);
         max-height: 170px;
         width: auto;
     }
@@ -298,7 +303,7 @@
     }
     #footer-ul li a{
         text-decoration: none;
-        color: var(--main-bg-color);
+        color: white;
         font-family: var(--main-font-family);
         font-size: 20px;
         font-weight: 600;
