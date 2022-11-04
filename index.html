@@ -10,18 +10,24 @@
 </head>
 <body>
     <section id="header">
-        <div id="nav-logo"><img src="Bilder/logo.jpg"></div>
+        <div>
+            <video autoplay muted loop id="myVideo">
+                <source src="Bilder/Skyscrapers-91744.mp4" type="video/mp4">
+            </video>
+            <div id="titel">
+                <div class="t1">GET-IT!</div>
+                <div class="t2 italic">SOCIAL MEDIA RECRUITING</div>
+            </div>
+        </div>
+        <div id="nav-logo"><img src="Bilder/get_it.jpg"></div>
         <ul id="nav">
             <li><a href="#">CONTACT</a></li>
             <li><a href="#">TEAM</a></li>
             <li><a href="#">ABOUT US</a></li>
             <li><a href="#">HOME</a></li>
         </ul>
-        <div id="titel">
-            <div class="t1">GET-IT!</div>
-            <div class="t2 italic">SOCIAL MEDIA RECRUITING</div>
-        </div>
         <button id="MenuIcon"><i class="fa fa-bars" onclick="burgerMenu()"></i></button>
+        <button id="MenuIconClose"><i class="fa fa-times" onclick="burgerMenuClose()"></i></button>
     </section>
     <section id="aboutus">
         <div id="aboutus-text">
@@ -29,7 +35,7 @@
             <p class="p2"><span id="ospan">GET IT!</span> baut Ihre Employer Brand und Sichtbarkeit aus, damit Sie großartige<br>
                 Mitarbeiter anziehen, qualifizieren und einstellen können.</p>
         </div>
-        <div id="box-container">
+        <div id="box-container" class="reveal">
             <div class="box">
                 <p class="box-header">Geringere Kosten pro Einstellung</p><br>
                 <p class="box-text">- Reduzieren Sie die Kosten pro Einstellung um bis zu 43 %.</p><br>
@@ -56,7 +62,7 @@
         <div id="team-banner">
             <h1>UNSER TEAM</h1>
         </div>
-        <div id="team-box-container">
+        <div id="team-box-container" class="reveal">
             <div class="team-overlay">
                 <div class="team-overlay-member">
                     <div class="balken"><img id="balken1" src="Bilder/balken-left.svg"></div>
@@ -116,3 +122,44 @@
     </footer>
 </body>
 </html>
+
+<script>
+
+    window.addEventListener('scroll', reveal);
+
+    function reveal(){
+        let reveals = document.querySelectorAll('.reveal');
+
+        for(var i = 0; i < reveals.length; i++){
+            let windowheight = window.innerHeight;
+            let revealtop = reveals[i].getBoundingClientRect().top;
+            let revealpoint = 150;
+
+            if(revealtop < windowheight - revealpoint){
+                reveals[i].classList.add('active');
+            }
+            else{
+                reveals[i].classList.remove('active');
+            }
+        }
+    }
+
+
+
+
+    nav = document.getElementById('nav');
+    navclose = document.getElementById('MenuIconClose')
+    function burgerMenu() {
+        nav.style.margin = "0 0";
+        nav.style.display = "block";
+        navclose.style.opacity = "1";
+        navclose.style.zIndex = "0";
+    }
+
+    function burgerMenuClose() {
+        nav.style.margin = "0 100vw";
+        nav.style.display = "none";
+        navclose.style.opacity = "0";
+        navclose.style.zIndex = "-2";
+    }
+</script>
